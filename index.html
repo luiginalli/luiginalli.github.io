@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Luigi Nalli | Scrittore, Sceneggiatore & Architetto Software</title>
-    <meta name="description" content="Sito ufficiale di Luigi Nalli. Architetto Software e Responsabile R&D (Open-Co), Scrittore e Sceneggiatore. Esperto in Blockchain, Sidha e autore di 'Tracce d'eternità'.">
-    <meta name="keywords" content="Luigi Nalli, Scrittore, Sceneggiatore, Architetto Software, Open-Co, R&D, Blockchain, Sidha, Meditazione Trascendentale, Tracce d'eternità, Supplizi d'amore, Luna Outrun, Retrowave">
+    <title>Luigi Nalli | Sceneggiatore, Scrittore & Architetto Software</title>
+    <meta name="description" content="Sito ufficiale di Luigi Nalli. Coordinatore R&D (Open-Co), progettista di architetture software e autore di narrazioni complesse, sceneggiature e romanzi.">
+    <meta name="keywords" content="Luigi Nalli, Scrittore, Sceneggiatore, Architetto Software, Open-Co, R&D, Blockchain, Sidha, Meditazione Trascendentale, Tracce d'eternità, Supplizi d'amore, Luna Outrun">
     <meta name="author" content="Luigi Nalli">
+    <link rel="canonical" href="https://www.luiginalli.it/">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+    <meta property="og:title" content="Luigi Nalli | Architetto Software & Sceneggiatore">
+    <meta property="og:description" content="La logica rigorosa dell'architettura software e l'esplorazione profonda dello storytelling. Sito ufficiale e portfolio.">
+    <meta property="og:url" content="https://www.luiginalli.it/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,11 +29,12 @@
       "alternateName": "Luna Outrun",
       "url": "https://www.luiginalli.it",
       "jobTitle": ["Architetto Software", "Scrittore", "Sceneggiatore"],
+      "description": "Coordinatore R&D presso Open-Co, progettista di software e sceneggiatore cinematografico.",
       "worksFor": {
         "@type": "Organization",
         "name": "Open-Co"
       },
-      "knowsAbout": ["Software Architecture", "Sceneggiatura", "Blockchain", "Meditazione Trascendentale", "LIMS"],
+      "knowsAbout": ["Software Architecture", "Sceneggiatura", "Storytelling", "Blockchain", "Meditazione Trascendentale", "Sviluppo Python"],
       "sameAs": [
         "https://www.linkedin.com/in/luiginalli", 
         "https://github.com/luiginalli"
@@ -39,7 +48,7 @@
             --bg-color: #0f172a; /* Slate 900 */
             --text-color: #e2e8f0; /* Slate 200 */
             --accent-color: #38bdf8; /* Sky 400 */
-            --highlight-color: #f59e0b; /* Amber 500 (per avvisi/wip) */
+            --highlight-color: #f59e0b; /* Amber 500 */
             --secondary-bg: #1e293b; /* Slate 800 */
             --font-main: 'Inter', sans-serif;
             --font-serif: 'Merriweather', serif;
@@ -66,6 +75,7 @@
             border-bottom: 1px solid rgba(255,255,255,0.1);
             z-index: 1000;
             padding: 1rem 0;
+            backdrop-filter: blur(5px);
         }
         nav {
             max-width: 1000px;
@@ -79,20 +89,24 @@
         .nav-links a { margin-left: 20px; font-size: 0.9rem; color: #94a3b8; }
         .nav-links a:hover { color: var(--accent-color); text-decoration: none; }
 
-        /* SEZIONI */
+        /* SEZIONI E LAYOUT */
         section {
             padding: 5rem 1rem;
             max-width: 800px;
             margin: 0 auto;
         }
+        .section-center { text-align: center; padding-bottom: 2rem; }
+        .divider { border: 0; border-top: 1px solid rgba(255,255,255,0.1); max-width: 800px; margin: 0 auto; }
+        .mt-2 { margin-top: 2rem; }
+        .mb-2 { margin-bottom: 2rem; }
+        .flex-center { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .flex-between { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
 
         h1, h2, h3 { color: #fff; }
+        h3.subtitle { font-size: 1rem; color: #94a3b8; }
         
-        /* HERO (BLOCCO 1) */
-        .hero {
-            padding-top: 8rem;
-            text-align: left;
-        }
+        /* HERO */
+        .hero { padding-top: 8rem; text-align: left; }
         .hero h1 { font-size: 3rem; margin-bottom: 0.5rem; letter-spacing: -1px; }
         .hero h2 { font-size: 1.5rem; font-weight: 300; color: #94a3b8; margin-bottom: 2rem; }
         .hero-bio { 
@@ -131,11 +145,19 @@
             font-weight: 600;
         }
 
-        /* BOOK SPECIFICS */
+        /* COMPONENTI SPECIFICI */
         .book-card { display: flex; flex-direction: column; gap: 1rem; justify-content: space-between;}
-        .book-status { font-size: 0.8rem; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 0.5rem;}
+        .book-status { font-size: 0.8rem; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 0.5rem; color: var(--highlight-color);}
+        .book-meta { font-size: 0.9rem; color: #94a3b8; }
+        .book-meta-light { font-size: 0.9rem; color: #cbd5e1; margin-bottom: 0.5rem; }
         
-        /* LISTS */
+        /* BOTTONI */
+        .btn { padding: 1rem 2rem; border-radius: 8px; font-weight: bold; }
+        .btn-outline { border: 1px solid var(--accent-color); text-align: center; padding: 0.5rem; border-radius: 4px; display: block; }
+        .btn-social { padding: 1rem 2rem; }
+        .btn-social-outline { border-color: var(--accent-color); }
+
+        /* LISTE */
         ul.clean-list { list-style: none; padding: 0; }
         ul.clean-list li { margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative; }
         ul.clean-list li::before {
@@ -152,6 +174,9 @@
             font-size: 0.9rem;
             color: #64748b;
         }
+        .footer-note { font-size: 0.8rem; opacity: 0.6; }
+        .contact-intro { max-width: 500px; margin: 0 auto 2rem auto; color: #94a3b8; }
+        .experiment-box { padding-top: 1rem; border-top: 1px dashed rgba(255,255,255,0.1); }
     </style>
 </head>
 <body>
@@ -172,19 +197,19 @@
         <h2>Architetto Software. Scrittore. Sceneggiatore.</h2>
         
         <div class="hero-bio">
-            <p>La mia ricerca professionale e creativa non si muove su binari paralleli, ma scorre lungo un Nastro di Möbius. La logica rigorosa dell'architettura software e l'esplorazione profonda dello storytelling possono sembrare mondi opposti, ma in realtà sono la stessa superficie che si piega e converge. Ritornare oggi alla sceneggiatura significa chiudere un cerchio geometrico: tutto torna, ma arricchito da una solida esperienza strutturale e da una realizzazione autoriale – dalla narrativa fino alla sintesi dell'haiku – tanto inaspettata quanto profonda.</p>
-            <p><strong>Come Sidha, la pratica della Meditazione Trascendentale e del Volo Yoga è il baricentro di questo ecosistema.</strong> È lo spazio di chiarezza e intuizione che unisce la mente dell'ingegnere a quella dell'autore, permettendomi di governare la complessità per progettare sistemi IT solidi e costruire architetture narrative inattaccabili.</p>
-            <p>Attualmente coordino il reparto R&D di Open-Co e sviluppo soggetti e sceneggiature per il cinema.</p>
+            <p>La mia ricerca professionale e creativa non si muove su binari paralleli, ma scorre lungo un Nastro di Möbius. La logica rigorosa dell'architettura software e l'esplorazione profonda dello storytelling possono sembrare mondi opposti, ma in realtà sono la stessa superficie che si piega e converge. Ritornare oggi alla sceneggiatura significa chiudere un cerchio geometrico: tutto torna, ma arricchito da una solida esperienza strutturale e da una realizzazione autoriale.</p>
+            <p><strong>Come Sidha, la pratica della Meditazione Trascendentale è il baricentro di questo ecosistema.</strong> È lo spazio di chiarezza e intuizione che unisce la mente dell'informatico a quella dell'autore, permettendomi di governare la complessità al fine di progettare sistemi IT solidi e costruire architetture narrative inattaccabili.</p>
+            <p>Attualmente coordino il reparto R&D di Open-Co e sviluppo soggetti per il cinema.</p>
         </div>
     </section>
 
-    <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); max-width: 800px; margin: 0 auto;">
+    <hr class="divider">
 
     <section id="writer">
         <span class="tag">CREATIVITÀ</span>
         <h2>Scrittura & Cinema</h2>
         
-		<div class="card" style="margin-bottom: 2rem;">
+        <div class="card mb-2">
             <h3>Sceneggiatura & Storytelling</h3>
             <p>
                 La mia scrittura è un <em>organismo versatile</em> che si è nutrito di una cultura cinematografica a tutto tondo e dello studio profondo degli <strong>archetipi narrativi</strong>. È un cammino iniziato tra le recensioni di <em>Cinema Critico</em>, le monografie di <em>YastaRadio</em> e il confronto storico con figure come <strong>D. Sacchetti</strong>, <strong>G. Panella</strong> e <strong>F. Frusciante</strong>.
@@ -197,12 +222,12 @@
             </p>
         </div>
 
-        <h3 style="margin-top: 2rem;">Pubblicazioni</h3>
+        <h3 class="mt-2">Pubblicazioni</h3>
         <div class="grid">
             <div class="card book-card">
                 <div>
                     <h3>Tracce d'eternità</h3>
-                    <p style="font-size: 0.9rem; color: #94a3b8;">Robin Edizioni, 2021</p>
+                    <p class="book-meta">Robin Edizioni, 2021</p>
                     <p>
                         Un'opera dove il tempo e la memoria si intrecciano in una <strong>struttura non lineare</strong>. 
                         Una sfida narrativa che esplora i confini della realtà attraverso un'architettura di trama 
@@ -215,29 +240,28 @@
             <div class="card book-card">
                 <div>
                     <h3>Supplizi d'amore</h3>
-                    <span class="book-status" style="color: var(--highlight-color);">Nuova Edizione in Preparazione</span>
+                    <span class="book-status">Nuova Edizione in Preparazione</span>
                     
-                    <p style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 0.5rem;">
+                    <p class="book-meta-light">
                         Opera pluripremiata (<strong>1° Premio "Franz Kafka Italia"</strong> - Sez. Raccolte di Racconti, Città di Grottammare)
                     </p>
                     
                     <p>La raccolta di racconti più citata. Attualmente fuori catalogo in attesa di riedizione.</p>
                 </div>
                 
-                <a href="mailto:luiginalli@gmail.com?subject=Richiesta info Supplizi d'amore" 
-                   style="border: 1px solid var(--accent-color); text-align: center; padding: 0.5rem; border-radius: 4px;">
-                   Avvisami quando esce &rarr;
+                <a href="mailto:luiginalli@gmail.com?subject=Richiesta info Supplizi d'amore" class="btn-outline">
+                    Avvisami quando esce &rarr;
                 </a> 
             </div>
         </div>
 
-        <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px dashed rgba(255,255,255,0.1);">
-            <h3 style="font-size: 1rem; color: #94a3b8;">Sperimentazioni & Pseudonimi</h3>
-            <div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div class="mt-2 experiment-box">
+            <h3 class="subtitle">Sperimentazioni & Pseudonimi</h3>
+            <div class="card flex-between">
                 <div>
                     <strong>Progetto "Luna Outrun"</strong> <span class="tag" style="margin-left: 10px;">Esclusiva Amazon</span>
-                    <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">
-                    Con il progetto <strong>LUNA</strong>, ho redatto un vero e proprio <em>manifesto della narrativa Retrowave</em>. È un’operazione di trasposizione estetica dove le sonorità dei sintetizzatori e le atmosfere al neon degli anni '80 <strong>migrano dalla musica alla parola scritta</strong>.
+                    <p class="book-meta mt-2" style="margin-top: 0.5rem; color: var(--text-color);">
+                    Con il progetto <strong>LUNA</strong>, ho redatto un primo <em>manifesto della narrativa Retrowave</em>. È un’operazione di trasposizione estetica dove le sonorità dei sintetizzatori e le atmosfere al neon degli anni '80 <strong>migrano dalla musica alla parola scritta</strong>.
                     </p>
                     <p>
                     Attraverso l'uso di pseudonimi e <strong>codici d'accesso</strong>, ho costruito un universo transmediale fatto di nostalgia tecnologica, hacking e visioni distopiche, definendo un nuovo standard per il genere in Italia.
@@ -252,13 +276,13 @@
         <span class="tag">TECNOLOGIA</span>
         <h2>Tech & Sviluppo Software</h2>
         
-        <div class="card" style="margin-bottom: 2rem;">
+        <div class="card mb-2">
             <h3>Coordinatore R&D @ Open-Co</h3>
             <p>
                 Guido la visione tecnologica e lo sviluppo di soluzioni proprietarie ad alto impatto. Mi occupo di <strong>progettazione software</strong> e coordinamento del team, trasformando requisiti complessi in architetture scalabili.
             </p>
             <p>
-                Specializzato nello sviluppo "from scratch" di <strong>motori di calcolo e parser algoritmici</strong>, ho progettato e realizzato sistemi custom di analisi matriciale e previsionale che superano le capacità dei software standard, risolvendo criticità strutturali dove le soluzioni multinazionali non arrivano e garantendo un <em>vantaggio competitivo</em> basato sulla potenza del codice proprietario.
+                Specializzato nello sviluppo "from scratch" di <strong>motori di calcolo e parser algoritmici</strong>, ho progettato e realizzato sistemi custom di analisi testuale matriciale che superano le capacità dei software standard, risolvendo criticità strutturali dove le soluzioni multinazionali non arrivano e garantendo un <em>vantaggio competitivo</em> basato sulla potenza del codice proprietario.
             </p>
         </div>
 
@@ -283,25 +307,25 @@
         </div>
     </section>
 
-    <section id="contact" style="text-align: center; padding-bottom: 2rem;">
+    <section id="contact" class="section-center">
         <h2>Mettiamoci in Contatto</h2>
-        <p style="max-width: 500px; margin: 0 auto 2rem auto; color: #94a3b8;">
+        <p class="contact-intro">
             Disponibile per realizzare soggetti cinematografici, networking professionale in ambito tecnologico o informazioni sulle prossime pubblicazioni.
         </p>
         
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="https://www.linkedin.com/in/luiginalli" class="card" style="padding: 1rem 2rem; border-color: var(--accent-color);">
+        <div class="flex-center">
+            <a href="https://www.linkedin.com/in/luiginalli" class="card btn-social btn-social-outline">
                 <strong>LinkedIn</strong>
             </a>
-            <a href="mailto:luiginalli@gmail.com" class="card" style="padding: 1rem 2rem;">
+            <a href="mailto:luiginalli@gmail.com" class="card btn-social">
                 <strong>Email</strong>
             </a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Luigi Nalli. Tutti i diritti riservati.<br>
-        <span style="font-size: 0.8rem; opacity: 0.6;">Sito Statico No-Track. Hosting GitHub Pages.</span></p>
+        <p>&copy; 2026 Luigi Nalli. Tutti i diritti riservati.<br>
+        <span class="footer-note">Sito Statico No-Track. Hosting GitHub Pages.</span></p>
     </footer>
 
 </body>
