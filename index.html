@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f172a">
     
-    <title>Luigi Nalli | Sceneggiatore, Scrittore & Architetto Software</title>
-    <meta name="description" content="Sito ufficiale di Luigi Nalli. Coordinatore R&D, progettista di architetture software e autore di narrazioni complesse, sceneggiature e racconti.">
-    <meta name="keywords" content="Luigi Nalli, Scrittore, Sceneggiatore, Architetto Software, R&D, Blockchain, Sidha, Meditazione Trascendentale, Tracce d'eternità, Supplizi d'amore, Luna Outrun">
+    <title>Luigi Nalli | Architetto Software, Coordinatore R&D & Sceneggiatore</title>
+    <meta name="description" content="Sito ufficiale di Luigi Nalli. Architetto Software, Coordinatore R&D e Sceneggiatore. Progettazione di sistemi IT complessi, sviluppo di soggetti cinematografici e architetture narrative.">
+    <meta name="keywords" content="Luigi Nalli, Scrittore, Sceneggiatore, Architetto Software, R&D, Sviluppo IP, Soggetti Cinematografici, Blockchain, Sidha, Meditazione Trascendentale">
     <meta name="author" content="Luigi Nalli">
     <link rel="canonical" href="https://www.luiginalli.it/">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
@@ -16,6 +17,12 @@
     <meta property="og:url" content="https://www.luiginalli.it/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="it_IT">
+    <meta property="og:image" content="https://www.luiginalli.it/img/cover-social.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Luigi Nalli | Architetto Software & Sceneggiatore">
+    <meta name="twitter:description" content="La logica rigorosa dell'architettura software e l'esplorazione profonda dello storytelling.">
+    <meta name="twitter:image" content="https://www.luiginalli.it/img/cover-social.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +35,7 @@
       "name": "Luigi Nalli",
       "alternateName": "Luna Outrun",
       "url": "https://www.luiginalli.it",
-      "jobTitle": ["Architetto Software", "Scrittore", "Sceneggiatore"],
+      "jobTitle": ["Architetto Software", "Sceneggiatore", "Coordinatore R&D"],
       "description": "Coordinatore R&D, progettista di software e sceneggiatore cinematografico.",
       "worksFor": {
         "@type": "Organization",
@@ -102,7 +109,7 @@
         .flex-center { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
         .flex-between { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
 
-        h1, h2, h3 { color: #fff; }
+        h1, h2, h3, h4 { color: #fff; }
         h3.subtitle { font-size: 1rem; color: #94a3b8; }
         
         /* HERO */
@@ -152,9 +159,8 @@
         .book-meta-light { font-size: 0.9rem; color: #cbd5e1; margin-bottom: 0.5rem; }
         
         /* BOTTONI */
-        .btn { padding: 1rem 2rem; border-radius: 8px; font-weight: bold; }
         .btn-outline { border: 1px solid var(--accent-color); text-align: center; padding: 0.5rem; border-radius: 4px; display: block; }
-        .btn-social { padding: 1rem 2rem; }
+        .btn-social { padding: 1rem 2rem; font-weight: bold; }
         .btn-social-outline { border-color: var(--accent-color); }
 
         /* LISTE */
@@ -182,7 +188,7 @@
 <body>
 
     <header>
-        <nav>
+        <nav aria-label="Navigazione principale">
             <div class="logo">LUIGI NALLI</div>
             <div class="nav-links">
                 <a href="#writer">Scrittura</a>
@@ -234,7 +240,7 @@
                         studiata per disorientare e, infine, ricomporre il <em>senso profondo dell'esistere</em>.
                     </p>
                 </div>
-                <a href="https://amzn.eu/d/2N1xI3E" target="_blank">Vedi su Amazon &rarr;</a>
+                <a href="https://amzn.eu/d/2N1xI3E" target="_blank" aria-label="Acquista Tracce d'eternità su Amazon">Vedi su Amazon &rarr;</a>
             </div>
 
             <div class="card book-card">
@@ -249,7 +255,7 @@
                     <p>La raccolta di racconti più citata. Attualmente fuori catalogo in attesa di riedizione.</p>
                 </div>
                 
-                <a href="mailto:luiginalli@gmail.com?subject=Richiesta info Supplizi d'amore" class="btn-outline">
+                <a href="mailto:luiginalli@gmail.com?subject=Richiesta info Supplizi d'amore" class="btn-outline" aria-label="Invia email per info su Supplizi d'amore">
                     Avvisami quando esce &rarr;
                 </a> 
             </div>
@@ -267,7 +273,7 @@
                     Attraverso l'uso di pseudonimi e <strong>codici d'accesso</strong>, ho costruito un universo transmediale fatto di nostalgia tecnologica, hacking e visioni distopiche, definendo un nuovo standard per il genere in Italia.
                     </p>
                 </div>
-                <a href="https://www.amazon.it/stores/LUNA-OUTRUN/author/B07MD281TW?ref=sr_ntt_srch_lnk_1&qid=1763941210&sr=8-1&isDramIntegrated=true&shoppingPortalEnabled=true" target="_blank" style="font-size: 0.9rem;">Vedi su Amazon &rarr;</a>
+                <a href="https://www.amazon.it/stores/LUNA-OUTRUN/author/B07MD281TW?ref=sr_ntt_srch_lnk_1&qid=1763941210&sr=8-1&isDramIntegrated=true&shoppingPortalEnabled=true" target="_blank" style="font-size: 0.9rem;" aria-label="Vedi progetto Luna Outrun su Amazon">Vedi su Amazon &rarr;</a>
             </div>
         </div>
 
@@ -287,6 +293,7 @@
                     Sebbene l'opera viva di una totale autonomia estetica, la disciplina della sottrazione richiesta dall'haiku è il riflesso della mia metodologia di scrittura: un approccio che mira alla pulizia del montaggio narrativo e all'essenzialità della struttura cinematografica, dove ogni parola deve giustificare la propria presenza.
                     </p>
                 </div>
+                
                 <div class="card">
                     <span class="tag">SVILUPPO IP & ADATTAMENTI</span>
                     <h4 style="margin: 0.5rem 0; color: #fff;">Revisione e Sviluppo IP Narrative</h4>
@@ -304,6 +311,24 @@
                         È un processo che unisce la creatività autoriale al rigore analitico, permettendomi di mappare le potenzialità di ogni singola storia e di posizionarla sul canale produttivo o editoriale più adeguato.
                     </p>
                 </div>            
+                
+                <div class="card">
+                    <span class="tag">RACCONTO GIALLO</span>
+                    <h4 style="margin: 0.5rem 0; color: #fff;">Ultimo Ciak al Metropol</h4>    
+                    <p style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 0.8rem;">
+                        Un racconto mystery concepito e strutturato come un meccanismo a orologeria. L'opera è in fase di stesura seguendo la rigorosa logica a incastro tipica del giallo investigativo, dove l'intreccio richiede un controllo millimetrico degli indizi, dei tempi e delle svolte narrative.
+                    </p>
+                    <p style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 0.8rem;">
+                        Il progetto si fonda su due pilastri metodologici:
+                    </p>
+                    <ul class="clean-list" style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 0.8rem;">
+                        <li><strong>Strutturazione analitica:</strong> L'ossatura della storia è stata ingegnerizzata fin dalle fondamenta tramite un solido <em>beat-sheet</em>, garantendo che la geometria dell'indagine funzioni perfettamente su carta prima ancora di iniziare la vera e propria stesura.</li>
+                        <li><strong>Disciplina della sottrazione:</strong> Una scrittura autoriale asciutta, dove ogni elemento, dialogo o descrizione giustifica la propria presenza all'interno del puzzle narrativo, eliminando ogni ridondanza testuale.</li>
+                    </ul>
+                    <p style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 0;">
+                        È un esercizio di precisione letteraria in cui il rigore dell'intreccio è il vero protagonista.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -350,10 +375,10 @@
         </p>
         
         <div class="flex-center">
-            <a href="https://www.linkedin.com/in/luiginalli" class="card btn-social btn-social-outline">
+            <a href="https://www.linkedin.com/in/luiginalli" class="card btn-social btn-social-outline" aria-label="Visita il profilo LinkedIn di Luigi Nalli">
                 <strong>LinkedIn</strong>
             </a>
-            <a href="mailto:luiginalli@gmail.com" class="card btn-social">
+            <a href="mailto:luiginalli@gmail.com" class="card btn-social" aria-label="Invia un'email a Luigi Nalli">
                 <strong>Email</strong>
             </a>
         </div>
